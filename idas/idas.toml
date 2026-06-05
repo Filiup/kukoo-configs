@@ -23,7 +23,7 @@ locateMaxTime = 15.0
 # 1 for spawning in most chunks and 1001 for none.
 [Castles]
 	#Range: 1 ~ 1001
-	castleAverageChunkDistance = 12
+	castleAverageChunkDistance = 36
 
 #-----------------------------------------------------------------------------------------
 # Average distance between spawn attempts for IDAS Wizard Towers.
