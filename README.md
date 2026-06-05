@@ -5,9 +5,31 @@ Tuned configuration files for the **Kukoo** CurseForge modpack
 **frequent enemy-filled dungeons**, fewer boring decorative structures, and
 controlled mob spawning.
 
-Each folder corresponds to one mod and contains the config file(s) we changed,
-under their **original filenames**. To apply, copy each file back to its path
-under the instance `config/` directory (see table below).
+## Install (for a friend — easiest)
+
+Copy **everything inside the `config/` folder of this repo** into your instance's
+`config/` folder, overwriting when asked:
+
+```
+<CurseForge>/Instances/Kukoo/config/
+```
+
+The `config/` folder mirrors the game's exact layout (root files + the
+`castle_dungeons/` and `idas/` subfolders), so it works right away — no manual
+placement needed. Then fully restart CurseForge + Minecraft. Note: structure
+changes only show up in **newly generated chunks**, so explore fresh terrain.
+
+> Requires the same pack: Forge `36.2.34`, Minecraft `1.16.5`, with these mods
+> installed. It only changes config values, not which mods you have.
+
+## Repo layout
+
+- **`config/`** — ready-to-deploy mirror of the instance `config/` directory (use this).
+- **Per-mod folders** (`when-dungeons-arise/`, `idas/`, …) — the same files grouped
+  by mod for easy browsing/review. Reference only; don't copy these directly.
+
+Each per-mod folder contains the config file(s) we changed under their **original
+filenames**; the table below shows where each maps inside `config/`.
 
 ## Files & where they belong
 
