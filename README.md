@@ -5,46 +5,58 @@ Tuned configuration files for the **Kukoo** CurseForge modpack
 **frequent enemy-filled dungeons**, fewer boring decorative structures, and
 controlled mob spawning.
 
-## Install (for a friend — easiest)
+## Install — read this carefully
 
-Copy **everything inside the `config/` folder of this repo** into your instance's
-`config/` folder, overwriting when asked:
+There is **only one folder to copy: `config/`**. Do **not** copy anything else
+(not the `reference/` folder, not `README.md`).
 
-```
-<CurseForge>/Instances/Kukoo/config/
-```
+1. Download/clone this repo.
+2. Open the repo's **`config/`** folder and select everything **inside** it
+   (the `.toml` / `.properties` files **and** the `castle_dungeons/` and `idas/`
+   subfolders).
+3. Paste it into your modpack's config folder, overwriting when asked:
+   `<CurseForge>/Instances/Kukoo/config/`
+4. **Stop here.** Do not also copy the per-mod folders — that's the mistake that
+   breaks it (it creates ignored junk folders like `config/when-dungeons-arise/`).
+5. Fully close and restart CurseForge + Minecraft.
 
-The `config/` folder mirrors the game's exact layout (root files + the
-`castle_dungeons/` and `idas/` subfolders), so it works right away — no manual
-placement needed. Then fully restart CurseForge + Minecraft. Note: structure
-changes only show up in **newly generated chunks**, so explore fresh terrain.
-
+> Structure changes only appear in **newly generated chunks** — explore fresh
+> terrain (or a new world) to see them. Already-explored areas won't change.
+>
 > Requires the same pack: Forge `36.2.34`, Minecraft `1.16.5`, with these mods
 > installed. It only changes config values, not which mods you have.
 
+### If you already pasted the wrong folders (cleanup)
+
+Inside your `Kukoo/config/` folder, delete any of these mod-named folders if they
+appear there (they don't belong in `config/` and do nothing):
+`when-dungeons-arise/`, `dungeons-enhanced/`, `dungeons-mod/`, `rl-structures/`,
+`awesome-dungeon-nether/`, `castle-dungeons/`, `battle-towers/`, `lycanites-mobs/`,
+`greek-fantasy/`, plus any stray `README.md`. **Keep** `castle_dungeons/` (with an
+underscore) and `idas/` — those are real.
+
 ## Repo layout
 
-- **`config/`** — ready-to-deploy mirror of the instance `config/` directory (use this).
-- **Per-mod folders** (`when-dungeons-arise/`, `idas/`, …) — the same files grouped
-  by mod for easy browsing/review. Reference only; don't copy these directly.
+- **`config/`** — the only thing you copy. Mirrors the game's exact config layout.
+- **`reference/`** — the same files grouped by mod, for browsing/review only.
+  **Never copy this.**
 
-Each per-mod folder contains the config file(s) we changed under their **original
-filenames**; the table below shows where each maps inside `config/`.
+The table below shows where each changed file lives inside `config/`.
 
 ## Files & where they belong
 
-| Folder | File | Goes to (`<instance>/config/…`) |
-|---|---|---|
-| `when-dungeons-arise/` | `when-dungeons-arise-common.toml` | `when-dungeons-arise-common.toml` |
-| `dungeons-enhanced/` | `dungeons_enhanced-common.toml` | `dungeons_enhanced-common.toml` |
-| `dungeons-mod/` | `dungeonsmod-common.toml` | `dungeonsmod-common.toml` |
-| `rl-structures/` | `rlstructures-common.toml` | `rlstructures-common.toml` |
-| `awesome-dungeon-nether/` | `awesomedungeonnether_1.properties` | `awesomedungeonnether_1.properties` |
-| `castle-dungeons/` | `config.cfg` | `castle_dungeons/config.cfg` |
-| `idas/` | `idas.toml` | `idas/idas.toml` |
-| `battle-towers/` | `ba-battletowers-config.toml` | `ba-battletowers-config.toml` |
-| `lycanites-mobs/` | `lycanitesmobs-common.toml` | `lycanitesmobs-common.toml` |
-| `greek-fantasy/` | `greekfantasy-common.toml` | `greekfantasy-common.toml` |
+| File | Path inside `config/` |
+|---|---|
+| `when-dungeons-arise-common.toml` | `when-dungeons-arise-common.toml` |
+| `dungeons_enhanced-common.toml` | `dungeons_enhanced-common.toml` |
+| `dungeonsmod-common.toml` | `dungeonsmod-common.toml` |
+| `rlstructures-common.toml` | `rlstructures-common.toml` |
+| `awesomedungeonnether_1.properties` | `awesomedungeonnether_1.properties` |
+| `config.cfg` (Castle Dungeons) | `castle_dungeons/config.cfg` |
+| `idas.toml` | `idas/idas.toml` |
+| `ba-battletowers-config.toml` | `ba-battletowers-config.toml` |
+| `lycanitesmobs-common.toml` | `lycanitesmobs-common.toml` |
+| `greekfantasy-common.toml` | `greekfantasy-common.toml` |
 
 ## Summary of changes
 
